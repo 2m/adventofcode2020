@@ -1,6 +1,6 @@
 // scala 2.13.3
 
-import $ivy.`com.propensive::probably-cli:0.5.0`
+import $ivy.`com.propensive::probably-cli:0.8.0`
 import probably._, global._
 
 import ammonite.ops._

@@ -1,14 +1,17 @@
 // scala 2.13.3
 
+import $ivy.`com.propensive::probably-cli:0.5.0`
+import probably._, global._
+
 import ammonite.ops._
 
-case class Password(from: Int, to: Int, char: Char, password: String) {
+case class Password(lower: Int, upper: Int, char: Char, password: String) {
   def valid = {
     val occurences = password.groupBy(identity).mapValues(_.size).getOrElse(char, 0)
-    from to to contains occurences
+    lower to upper contains occurences
   }
 
-  def validV2 = password.charAt(from - 1) == char ^ password.charAt(to - 1) == char
+  def validV2 = password.charAt(lower - 1) == char ^ password.charAt(upper - 1) == char
 }
 
 object Password {
@@ -21,5 +24,12 @@ object Password {
 
 val passwords = read.lines ! pwd / "day2.txt" map Password.apply
 
-println(passwords.filter(_.valid).size) // 564
-println(passwords.filter(_.validV2).size) // 325
+test("valid paswords by the first validation rule") {
+  passwords.filter(_.valid).size
+}.assert(_ == 564)
+
+test("valid paswords by the second validation rule") {
+  passwords.filter(_.validV2).size
+}.assert(_ == 325)
+
+println(Suite.show(test.report()))

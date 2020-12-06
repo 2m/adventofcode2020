@@ -25,14 +25,14 @@ object Main {
   def asInt(s: String) = s.toIntOption.getOrElse(0)
 
   def validProperties: PartialFunction[String, Unit] = {
-    case r"byr:$year" if 1920 to 2002 contains asInt(year)                                       =>
-    case r"iyr:$year" if 2010 to 2020 contains asInt(year)                                       =>
-    case r"eyr:$year" if 2020 to 2030 contains asInt(year)                                       =>
-    case r"hgt:${height}cm" if 150 to 193 contains asInt(height)                                 =>
-    case r"hgt:${height}in" if 59 to 76 contains asInt(height)                                   =>
-    case r"hcl:#$colour" if colour.forall(_.isLetterOrDigit) && colour.size == 6                 =>
-    case r"ecl:$colour" if Seq("amb", "blu", "brn", "gry", "grn", "hzl", "oth").contains(colour) =>
-    case r"pid:$id" if id.forall(_.isDigit) && id.size == 9                                      =>
+    case s"byr:$year" if 1920 to 2002 contains asInt(year)                                       =>
+    case s"iyr:$year" if 2010 to 2020 contains asInt(year)                                       =>
+    case s"eyr:$year" if 2020 to 2030 contains asInt(year)                                       =>
+    case s"hgt:${height}cm" if 150 to 193 contains asInt(height)                                 =>
+    case s"hgt:${height}in" if 59 to 76 contains asInt(height)                                   =>
+    case s"hcl:#$colour" if colour.forall(_.isLetterOrDigit) && colour.size == 6                 =>
+    case s"ecl:$colour" if Seq("amb", "blu", "brn", "gry", "grn", "hzl", "oth").contains(colour) =>
+    case s"pid:$id" if id.forall(_.isDigit) && id.size == 9                                      =>
   }
 
   def run() = {

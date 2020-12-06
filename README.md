@@ -29,7 +29,7 @@ List of solutions and Scala idioms/libraries used:
 | [Day 3](day3.sc)  | [For Comprehensions][for]                                              |
 | [Day 4](day4.sc)  | [Akka Streams][akka-streams], [Ammonite Regex pattern matching][amm-r] |
 | [Day 5](day5.sc)  | [Parsing text to integers][parse-int]                                  |
-| [Day 6](day6.sc)  | [fs2][fs2]                                                             |
+| [Day 6](day6.sc)  | [fs2][], [semigroup][]                                                 |
 
 [aoc2020]:      https://adventofcode.com/2020
 [amm]:          https://ammonite.io/
@@ -41,3 +41,4 @@ List of solutions and Scala idioms/libraries used:
 [akka-streams]: https://doc.akka.io/docs/akka/current/stream/stream-quickstart.html
 [parse-int]:    https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html#parseInt(java.lang.String,int)
 [fs2]:          https://fs2.io/guide.html
+[semigroup]:    https://typelevel.org/cats/typeclasses/semigroup.html

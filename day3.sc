@@ -1,3 +1,5 @@
+// scala 2.13.3
+
 import ammonite.ops._
 
 import $ivy.`com.propensive::probably-cli:0.8.0`

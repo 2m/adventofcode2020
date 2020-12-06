@@ -1,13 +1,43 @@
-## Run
+This repository contains solutions to various puzzles of the [Advent of Code 2020][aoc2020].
+Puzzles are solved with various idioms and libraries from the Scala ecosystem.
 
-Install [Ammonite](https://ammonite.io/) to run the code:
+[Ammonite][amm] is used to run the code.
+It is available from many package managers (e.g. `brew install ammonite-repl`).
+When running a puzzle solution (e.g. `amm day2.sc`) dependencies will be downloaded automatically.
+[Probably][probably] will register any assertions in the code and will print a summary:
 
-```sh
-brew install ammonite-repl
+```
+┌─────┬────────┬──────────────────────────────────────────────┬───────┬───────┐
+│     │ Hash   │ Test                                         │ Time  │ Debug │
+├─────┼────────┼──────────────────────────────────────────────┼───────┼───────┤
+│  ✓  │ 71d872 │ valid paswords by the first validation rule  │ 0.046 │       │
+│  ✓  │ baa61a │ valid paswords by the second validation rule │ 0.001 │       │
+└─────┴────────┴──────────────────────────────────────────────┴───────┴───────┘
+Passed: 2   Failed: 0   Total: 2
+
+ ✓  Pass                               ✗  Fail
+ ?  Throws in check                    !  Throws in body
+ ±  Fails sometimes                    #  Suite partially fails
 ```
 
-The run it:
+List of solutions and Scala idioms/libraries used:
 
-```sh
-amm day1.sc
-```
+| Puzzle            | Idioms and libraries                                                   |
+| -------------     | ---------------------------------------------------------------------- |
+| [Day 1](day1.sc)  | [Ammonite Ops][amm-ops], set operations                                |
+| [Day 2](day2.sc)  | [Regex pattern matching][regex]                                        |
+| [Day 3](day3.sc)  | [For Comprehensions][for]                                              |
+| [Day 4](day4.sc)  | [Akka Streams][akka-streams], [Ammonite Regex pattern matching][amm-r] |
+| [Day 5](day5.sc)  | [Parsing text to integers][parse-int]                                  |
+| [Day 6](day6.sc)  | [fs2][fs2]                                                             |
+
+[aoc2020]:      https://adventofcode.com/2020
+[amm]:          https://ammonite.io/
+[amm-ops]:      https://ammonite.io/#Operations
+[amm-r]:        https://github.com/lihaoyi/Ammonite/blob/376ee9d418638592ffc0627312a1843ea3776a39/ops/src/test/scala/test/ammonite/ops/PathTests.scala#L228-L235
+[probably]:     https://github.com/propensive/probably
+[regex]:        https://www.scala-lang.org/api/2.13.3/scala/util/matching/Regex.html
+[for]:          https://docs.scala-lang.org/tour/for-comprehensions.html
+[akka-streams]: https://doc.akka.io/docs/akka/current/stream/stream-quickstart.html
+[parse-int]:    https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html#parseInt(java.lang.String,int)
+[fs2]:          https://fs2.io/guide.html

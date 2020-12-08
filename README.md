@@ -30,6 +30,7 @@ List of solutions and Scala idioms/libraries used:
 | [Day 4](day4.sc)  | [Akka Streams][akka-streams], [Match on interpolator][match-interp]    |
 | [Day 5](day5.sc)  | [Parsing text to integers][parse-int]                                  |
 | [Day 6](day6.sc)  | [fs2][], [semigroup][]                                                 |
+| [Day 7](day7.sc)  | [scala-graph][]                                                        |
 
 [aoc2020]:      https://adventofcode.com/2020
 [amm]:          https://ammonite.io/
@@ -42,3 +43,4 @@ List of solutions and Scala idioms/libraries used:
 [parse-int]:    https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html#parseInt(java.lang.String,int)
 [fs2]:          https://fs2.io/guide.html
 [semigroup]:    https://typelevel.org/cats/typeclasses/semigroup.html
+[scala-graph]:  https://www.scala-graph.org/guides/core-initializing.html

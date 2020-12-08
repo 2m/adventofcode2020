@@ -31,6 +31,7 @@ List of solutions and Scala idioms/libraries used:
 | [Day 5](day5.sc)  | [Parsing text to integers][parse-int]                                  |
 | [Day 6](day6.sc)  | [fs2][], [semigroup][]                                                 |
 | [Day 7](day7.sc)  | [scala-graph][]                                                        |
+| [Day 8](day8.sc)  | [var][]                                                                |
 
 [aoc2020]:      https://adventofcode.com/2020
 [amm]:          https://ammonite.io/
@@ -44,3 +45,4 @@ List of solutions and Scala idioms/libraries used:
 [fs2]:          https://fs2.io/guide.html
 [semigroup]:    https://typelevel.org/cats/typeclasses/semigroup.html
 [scala-graph]:  https://www.scala-graph.org/guides/core-initializing.html
+[var]:          https://docs.scala-lang.org/overviews/scala-book/two-types-variables.html

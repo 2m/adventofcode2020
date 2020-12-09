@@ -47,4 +47,5 @@ List of solutions and Scala idioms/libraries used:
 [semigroup]:    https://typelevel.org/cats/typeclasses/semigroup.html
 [scala-graph]:  https://www.scala-graph.org/guides/core-initializing.html
 [var]:          https://docs.scala-lang.org/overviews/scala-book/two-types-variables.html
+[mutable-coll]: https://docs.scala-lang.org/overviews/collections-2.13/concrete-mutable-collection-classes.html
 [subsets]:      https://alvinalexander.com/scala/how-to-split-sequences-subsets-groupby-partition-scala-cookbook/

@@ -22,17 +22,19 @@ Passed: 2   Failed: 0   Total: 2
 
 List of solutions and Scala idioms/libraries used:
 
-| Puzzle            | Idioms and libraries                                                   |
-| -------------     | ---------------------------------------------------------------------- |
-| [Day 1](day1.sc)  | [Ammonite Ops][amm-ops], set operations                                |
-| [Day 2](day2.sc)  | [Regex pattern matching][regex]                                        |
-| [Day 3](day3.sc)  | [For Comprehensions][for]                                              |
-| [Day 4](day4.sc)  | [Akka Streams][akka-streams], [Match on interpolator][match-interp]    |
-| [Day 5](day5.sc)  | [Parsing text to integers][parse-int]                                  |
-| [Day 6](day6.sc)  | [fs2][], [semigroup][]                                                 |
-| [Day 7](day7.sc)  | [scala-graph][]                                                        |
-| [Day 8](day8.sc)  | [var][], [Mutable Collections][mutable-coll]                           |
-| [Day 9](day9.sc)  | [Collections Sliding Window, Tails][subsets]                            |
+| Puzzle             | Idioms and libraries                                                   |
+| ------------------ | ---------------------------------------------------------------------- |
+| [Day 1](day1.sc)   | [Ammonite Ops][amm-ops], set operations                                |
+| [Day 2](day2.sc)   | [Regex pattern matching][regex]                                        |
+| [Day 3](day3.sc)   | [For Comprehensions][for]                                              |
+| [Day 4](day4.sc)   | [Akka Streams][akka-streams], [Match on interpolator][match-interp]    |
+| [Day 5](day5.sc)   | [Parsing text to integers][parse-int]                                  |
+| [Day 6](day6.sc)   | [fs2][], [semigroup][]                                                 |
+| [Day 7](day7.sc)   | [scala-graph][]                                                        |
+| [Day 8](day8.sc)   | [var][], [Mutable Collections][mutable-coll]                           |
+| [Day 9](day9.sc)   | [Collections Sliding Window, Tails][subsets]                           |
+| [Day 10](day10.sc) | [Collections Sliding Window][subsets]                                  |
+| [Day 11](day11.sc) | [Try, Success, Failure][try]                                           |
 
 [aoc2020]:      https://adventofcode.com/2020
 [amm]:          https://ammonite.io/
@@ -49,3 +51,4 @@ List of solutions and Scala idioms/libraries used:
 [var]:          https://docs.scala-lang.org/overviews/scala-book/two-types-variables.html
 [mutable-coll]: https://docs.scala-lang.org/overviews/collections-2.13/concrete-mutable-collection-classes.html
 [subsets]:      https://alvinalexander.com/scala/how-to-split-sequences-subsets-groupby-partition-scala-cookbook/
+[try]:          https://docs.scala-lang.org/overviews/scala-book/functional-error-handling.html#trysuccessfailure

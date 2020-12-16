@@ -35,6 +35,7 @@ List of solutions and Scala idioms/libraries used:
 | [Day 9](day9.sc)   | [Collections Sliding Window, Tails][subsets]                           |
 | [Day 10](day10.sc) | [Collections Sliding Window][subsets]                                  |
 | [Day 11](day11.sc) | [Try, Success, Failure][try]                                           |
+| [Day 12](day12.sc) | [fs2][], [LazyList][lazy-list]                                         |
 
 [aoc2020]:      https://adventofcode.com/2020
 [amm]:          https://ammonite.io/
@@ -52,3 +53,4 @@ List of solutions and Scala idioms/libraries used:
 [mutable-coll]: https://docs.scala-lang.org/overviews/collections-2.13/concrete-mutable-collection-classes.html
 [subsets]:      https://alvinalexander.com/scala/how-to-split-sequences-subsets-groupby-partition-scala-cookbook/
 [try]:          https://docs.scala-lang.org/overviews/scala-book/functional-error-handling.html#trysuccessfailure
+[lazy-list]:    https://www.scala-lang.org/api/current/scala/collection/immutable/LazyList.html

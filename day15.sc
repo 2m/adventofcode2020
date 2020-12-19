@@ -12,8 +12,6 @@ import cats.effect.{Blocker, ExitCode, IO, IOApp}
 import $ivy.`com.propensive::probably-cli:0.8.0`
 import probably._, global._
 
-import java.nio.file.Paths
-
 object Memory extends IOApp {
   val initial = read.lines ! pwd / "day15.txt" map (_.split(",").map(_.toInt)) head
 

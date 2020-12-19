@@ -88,14 +88,11 @@ object Computer extends IOApp {
     }
 
   def run(args: List[String]): IO[ExitCode] =
-    program.through(decoderV1).map(checkSum(BigInt("14553106347726"))).showLinesStdOut.compile.toList *> program
-          .through(decoderV2)
-          .map(checkSum(BigInt("2737766154126")))
-          .showLinesStdOut
-          .compile
-          .toList *> IO(
-          println(Suite.show(test.report()))
-        ) *> IO(ExitCode.Success)
+    IO.unit *>
+        program.through(decoderV1).map(checkSum(BigInt("14553106347726"))).compile.drain *>
+        program.through(decoderV2).map(checkSum(BigInt("2737766154126"))).compile.drain *>
+        IO(println(Suite.show(test.report()))) *>
+        IO(ExitCode.Success)
 }
 
 Computer.main(Array())

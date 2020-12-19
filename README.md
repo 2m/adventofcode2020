@@ -38,6 +38,7 @@ List of solutions and Scala idioms/libraries used:
 | [Day 12](day12.sc) | [fs2][], [LazyList][lazy-list]                                         |
 | [Day 13](day13.sc) | [minBy][]                                                              |
 | [Day 14](day14.sc) | [fs2][]                                                                |
+| [Day 15](day15.sc) | [fs2][]                                                                |
 
 [aoc2020]:      https://adventofcode.com/2020
 [amm]:          https://ammonite.io/

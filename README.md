@@ -36,6 +36,7 @@ List of solutions and Scala idioms/libraries used:
 | [Day 10](day10.sc) | [Collections Sliding Window][subsets]                                  |
 | [Day 11](day11.sc) | [Try, Success, Failure][try]                                           |
 | [Day 12](day12.sc) | [fs2][], [LazyList][lazy-list]                                         |
+| [Day 13](day13.sc) | [minBy][]                                                              |
 
 [aoc2020]:      https://adventofcode.com/2020
 [amm]:          https://ammonite.io/
@@ -54,3 +55,4 @@ List of solutions and Scala idioms/libraries used:
 [subsets]:      https://alvinalexander.com/scala/how-to-split-sequences-subsets-groupby-partition-scala-cookbook/
 [try]:          https://docs.scala-lang.org/overviews/scala-book/functional-error-handling.html#trysuccessfailure
 [lazy-list]:    https://www.scala-lang.org/api/current/scala/collection/immutable/LazyList.html
+[minBy]:        https://allaboutscala.com/tutorials/chapter-8-beginner-tutorial-using-scala-collection-functions/scala-minby-example/

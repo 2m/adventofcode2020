@@ -15,13 +15,12 @@ def incr(key: Int, map: Map[Int, Int]) =
     case None        => Some(1)
   }
 
-val distribution = deviceAdapterWall.sliding(2).foldLeft(Map.empty[Int, Int]) {
-  case (distr, pair) =>
-    val diff = pair.last - pair.head
-    distr.updatedWith(diff) {
-      case Some(occurence) => Some(occurence + 1)
-      case None            => Some(1)
-    }
+val distribution = deviceAdapterWall.sliding(2).foldLeft(Map.empty[Int, Int]) { case (distr, pair) =>
+  val diff = pair.last - pair.head
+  distr.updatedWith(diff) {
+    case Some(occurence) => Some(occurence + 1)
+    case None            => Some(1)
+  }
 }
 
 test("product of 1 jolt and 3 jolt differences") {
@@ -32,13 +31,12 @@ println(Suite.show(test.report()))
 
 val lengths = deviceAdapterWall.sliding(2).map(s => s.last - s.head)
 //println(lengths.toList)
-val distr = lengths.sliding(2).foldLeft((0, Map.empty[Int, Int])) {
-  case ((count, distr), pair) =>
-    pair.toList match {
-      case _ :: 1 :: Nil => (count + 1, distr)
-      case 1 :: 3 :: Nil => (0, incr(count, distr))
-      case 3 :: 3 :: Nil => (0, distr)
-    }
+val distr = lengths.sliding(2).foldLeft((0, Map.empty[Int, Int])) { case ((count, distr), pair) =>
+  pair.toList match {
+    case _ :: 1 :: Nil => (count + 1, distr)
+    case 1 :: 3 :: Nil => (0, incr(count, distr))
+    case 3 :: 3 :: Nil => (0, distr)
+  }
 }
 
 val combi = distr._2.map {

@@ -17,9 +17,9 @@ case object Break extends Entry
 case class Property(v: String) extends Entry
 
 val entries: Seq[Entry] = read.lines ! pwd / "day4.txt" flatMap {
-      case ""   => Seq(Break)
-      case line => line.split(" ").map(Property)
-    }
+  case ""   => Seq(Break)
+  case line => line.split(" ").map(Property)
+}
 
 object Main {
   def asInt(s: String) = s.toIntOption.getOrElse(0)
@@ -40,8 +40,8 @@ object Main {
     val res =
       Source(entries)
         .splitWhen(_ == Break)
-        .collect {
-          case Property(v) => v
+        .collect { case Property(v) =>
+          v
         }
         .collect(validProperties)
         .fold(Seq.empty[Unit])(_ :+ _)

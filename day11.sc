@@ -13,9 +13,9 @@ val width = seats.head.length
 val plan = seats.flatMap(_.toCharArray)
 
 def numOfOccupied(id: Int, plan: Seq[Char]) =
-  ((if (id    % width != 0) Seq(id - 1, id - width - 1, id + width - 1) else Seq.empty) ++
-      (if (id % width != width - 1) Seq(id + 1, id - width + 1, id + width + 1) else Seq.empty) ++
-      Seq(id + width, id - width))
+  ((if (id  % width != 0) Seq(id - 1, id - width - 1, id + width - 1) else Seq.empty) ++
+    (if (id % width != width - 1) Seq(id + 1, id - width + 1, id + width + 1) else Seq.empty) ++
+    Seq(id + width, id - width))
     .map(plan.lift(_).getOrElse('.') match {
       case '#' => 1
       case _   => 0

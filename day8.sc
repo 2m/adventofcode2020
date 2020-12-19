@@ -43,8 +43,8 @@ val results = badCode.zipWithIndex
   .map(computer)
 
 test("acc value with fixed code") {
-  results.collectFirst {
-    case Right(value) => value
+  results.collectFirst { case Right(value) =>
+    value
   }.get
 }.assert(_ == 944)
 

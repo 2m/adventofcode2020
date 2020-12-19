@@ -23,12 +23,12 @@ object Memory extends IOApp {
   }
 
   val game = Stream(initial.init.toSeq: _*) ++ Stream.unfold(State(initial)) { state =>
-          val next = state.seen.get(state.next) match {
-            case None       => 0
-            case Some(seen) => state.size - seen
-          }
-          Some(state.next, State(state.seen.updated(state.next, state.size), next, state.size + 1))
-        }
+    val next = state.seen.get(state.next) match {
+      case None       => 0
+      case Some(seen) => state.size - seen
+    }
+    Some(state.next, State(state.seen.updated(state.next, state.size), next, state.size + 1))
+  }
 
   def checkElement(num: Int)(el: Int) =
     test(s"check ${num}th element") {
@@ -37,10 +37,10 @@ object Memory extends IOApp {
 
   def run(args: List[String]): IO[ExitCode] =
     IO.unit *>
-        IO(checkElement(2020)(639)) *>
-        IO(checkElement(30000000)(266)) *>
-        IO(println(Suite.show(test.report()))) *>
-        IO(ExitCode.Success)
+      IO(checkElement(2020)(639)) *>
+      IO(checkElement(30000000)(266)) *>
+      IO(println(Suite.show(test.report()))) *>
+      IO(ExitCode.Success)
 }
 
 Memory.main(Array())

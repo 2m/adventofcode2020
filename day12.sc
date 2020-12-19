@@ -87,8 +87,8 @@ object Navigation extends IOApp {
 
   def run(args: List[String]): IO[ExitCode] =
     shipDestination.compile.toList.map(_.head).map(checkShipdestination) *>
-        waypointDestination.compile.toList.map(_.head).map(checkWaypointdestination) *>
-        IO(ExitCode.Success)
+      waypointDestination.compile.toList.map(_.head).map(checkWaypointdestination) *>
+      IO(ExitCode.Success)
 }
 
 Navigation.main(Array())
